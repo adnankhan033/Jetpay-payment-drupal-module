@@ -1,0 +1,9 @@
+name: Jetpay Payment Gateway
+type: module
+description: 'Jetpay payment gateway.'
+package: Commerce
+core_version_requirement: ^9.2 || ^10
+dependencies:
+  - commerce:commerce
+  - commerce:commerce_payment
+

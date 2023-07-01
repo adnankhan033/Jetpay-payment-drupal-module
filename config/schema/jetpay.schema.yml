@@ -1,0 +1,6 @@
+commerce_payment.commerce_payment_gateway.plugin.jetpay:
+  type: commerce_payment_gateway_configuration
+  mapping:
+    seller_email:
+      type: string
+      label: 'Seller Email'

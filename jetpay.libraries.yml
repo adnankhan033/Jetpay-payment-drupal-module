@@ -1,0 +1,17 @@
+form:
+  header: true
+  js:
+    "//jetcamer.com/jetpay.js": { type: external }
+    "//jetcamer.com/cameroon/plugins/sweetalert/sweetalert2@9.js": { type: external }
+
+payment:
+  css:
+    theme:
+      assets/css/styles.css: {}
+  js:
+    assets/js/jetpay-payment.js: { attributes: { defer: true } }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - jetpay/form

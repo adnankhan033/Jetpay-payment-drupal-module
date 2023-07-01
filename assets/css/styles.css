@@ -1,0 +1,18 @@
+.swal2-content {
+  position: relative;
+}
+
+.swal2-html-container {
+  position: absolute;
+  top: 4.8em;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.swal2-content > input[type="tel"] {
+  margin-bottom: 7%;
+}
+
+#swal2-content {
+  white-space: nowrap;
+}

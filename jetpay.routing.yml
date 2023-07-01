@@ -1,0 +1,15 @@
+jetpay.on_return:
+  path: '/jetpay/{commerce_order}/{step}/return'
+  defaults:
+    _title: 'JetPay'
+    _controller: '\Drupal\jetpay\Controller\JetpayController::returnPage'
+  requirements:
+    _custom_access: '\Drupal\jetpay\Controller\JetpayController::access'
+    _module_dependencies: commerce_checkout
+  options:
+    parameters:
+      commerce_order:
+        type: entity:commerce_order
+    no_cache: TRUE
+
+    

@@ -1,0 +1,19 @@
+<?php
+
+// administer-commerce-payment
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Session\AccountInterface;
+
+/**
+ * Implements hook_commerce_entity_access
+ */
+function jetpay_entity_access(EntityInterface $entity, $operation, AccountInterface $account) {
+    $bundle = $entity->bundle();
+    if ($bundle == 'payment_default' && $operation == "delete") {
+        if ($account->hasPermission('administer commerce_payment')) {
+            return AccessResult::allowed();
+        }
+    }
+}
